@@ -65,14 +65,9 @@ CreateThread(function() --no more wanted levels
 	for i = 1, 15 do
 		EnableDispatchService(i, false)
 	end
-
+	DisableIdleCamera(true)
 	SetMaxWantedLevel(0)
 end)
-
-if Config.IdleCamera then --Disable Idle Cinamatic Cam
-	DisableIdleCamera(true)
-end
-
 
 CreateThread(function() -- no weapon drops from peds
 	local pedPool = GetGamePool('CPed')
